@@ -23,4 +23,14 @@ function showGuess(word, guesses) {
 console.log('show guess 1:', showGuess('hello', ['l']), 'should be:', '_ _ l l _')
 console.log('show guess 2:', showGuess('hello', ['l', 'a', 'e']), 'should be:', '_ e l l _')
 
+// Write a function that takes a word, and an array of guesses, and returns if the player has won or not.
+function isWinner(word, guesses) {
+    // checks whether all letters have been guessed
+    return word
+      .split('')
+      .filter(letter => guesses.indexOf(letter) >= 0)
+      .length === word.length;
+  }
 
+console.log('winner 1:', isWinner('hello', ['e', 'x']), 'should be:', false)
+console.log('winner 2:', isWinner('hello', ['o', 'l', 'e', 'h']), 'should be:', true)
