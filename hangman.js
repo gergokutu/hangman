@@ -1,5 +1,8 @@
 // step1: Write a function that takes a word, and an array of guessed letters, and returns count of failed guesses.
 function wrongGuessCount(word, guesses) {
+    // same syntax like:
+    // return guesses.filter(letter => word.indexOf(letter) < 0).length
+    // because JS works this way and she knows it somehow... and does not puts ; at the end of the line in this case... ahhh
     return guesses
         .filter(letter => word.indexOf(letter) < 0)
         .length
