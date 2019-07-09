@@ -2,7 +2,7 @@
 function wrongGuessCount(word, guesses) {
     // same syntax like:
     // return guesses.filter(letter => word.indexOf(letter) < 0).length
-    // because JS works this way and she knows it somehow... and does not puts ; at the end of the line in this case... ahhh
+    // because JS works this way and she knows it somehow... and does not puts ; at the end of the line in this case...
     return guesses
         .filter(letter => word.indexOf(letter) < 0)
         .length
